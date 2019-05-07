@@ -4,29 +4,32 @@ let loadingData=(function(){
 	$progress=$loadingBox.find(".progress");
 	$current=$progress.find(".current");
 	/*加载所有的图片，也就是把所有图片的地址放入一个数组中,然后循环进行加载*/
+	// let appUrl="http://localhost/web/project/resume";
+	let appUrl="https://huminggui.github.io/appresume";
+
 	let imagesData=[
-		"http://localhost/web/project/resume/images/cube1.jpg",
-		"http://localhost/web/project/resume/images/cube2.jpg",
-		"http://localhost/web/project/resume/images/cube3.jpg",
-		"http://localhost/web/project/resume/images/cube4.jpg",
-		"http://localhost/web/project/resume/images/cube5.jpg",
-		"http://localhost/web/project/resume/images/cube6.jpg",
-		"http://localhost/web/project/resume/images/inter.jpg",
-		"http://localhost/web/project/resume/images/keyboard.png",
-		"http://localhost/web/project/resume/images/page2.1.jpg",
-		"http://localhost/web/project/resume/images/page2.2.jpg",
-		"http://localhost/web/project/resume/images/page2.3.jpg",
-		"http://localhost/web/project/resume/images/page2.4.jpg",
-		"http://localhost/web/project/resume/images/page2.5.jpg",
-		"http://localhost/web/project/resume/images/page2.6.jpg",
-		"http://localhost/web/project/resume/images/page2.home.jpg",
-		"http://localhost/web/project/resume/images/page3.home.jpg",
-		"http://localhost/web/project/resume/images/page4.home.jpg",
-		"http://localhost/web/project/resume/images/page5.home.jpg",
-		"http://localhost/web/project/resume/images/page6.home.jpg",
-		"http://localhost/web/project/resume/images/page6.1.png",
-		"http://localhost/web/project/resume/images/page6.2.png",
-		"http://localhost/web/project/resume/images/self.jpg"
+		"appUrl/images/cube1.jpg",
+		"appUrl/images/cube2.jpg",
+		"appUrl/images/cube3.jpg",
+		"appUrl/images/cube4.jpg",
+		"appUrl/images/cube5.jpg",
+		"appUrl/images/cube6.jpg",
+		"appUrl/images/inter.jpg",
+		"appUrl/images/keyboard.png",
+		"appUrl/images/page2.1.jpg",
+		"appUrl/images/page2.2.jpg",
+		"appUrl/images/page2.3.jpg",
+		"appUrl/images/page2.4.jpg",
+		"appUrl/images/page2.5.jpg",
+		"appUrl/images/page2.6.jpg",
+		"appUrl/images/page2.home.jpg",
+		"appUrl/images/page3.home.jpg",
+		"appUrl/images/page4.home.jpg",
+		"appUrl/images/page5.home.jpg",
+		"appUrl/images/page6.home.jpg",
+		"appUrl/images/page6.1.png",
+		"appUrl/images/page6.2.png",
+		"appUrl/images/self.jpg"
 	];
 	let num=0;
 	let len=imagesData.length;
@@ -63,7 +66,7 @@ let loadingData=(function(){
 				alert("非常抱歉，网络异常，无法进入指定页面");
 				window.location.href="http://www.baidu.com";
 			}
-		},10000);
+		},10000*6);
 	}
 	
 	/*这个是加载完成的操作**/
@@ -269,7 +272,7 @@ let keyboardRander=(function(){
 	return{
 		init:function(){
 			$keyboardBox.css("display","block");
-			$.getJSON("http://localhost/web/project/resume/static/message.json",function(res){
+			$.getJSON("appUrl/static/message.json",function(res){
 				data=res;
 				messageLength=data.length;
 				addMessage();
