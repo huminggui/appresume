@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>胡明桂移动端简历</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<!-- 引入swiper的基础样式 -->
+	<link rel="stylesheet" href="./style/swiper.min.css" >
+	<!-- 使用当前的less转换成的css样式 -->
+	<link rel="stylesheet" href="./style/index.css">
+	<!-- 主体的less样式 -->
+	<!-- <link rel="stylesheet/less" href="style/index.css"> -->
+	<!-- 引入less识别js文件 -->
+	<!-- <script src="script/less.min.js"></script> -->
+	<!-- REM响应市的实现 -->
+	<script>
+		/*我们先定义好设计图的宽度是640，那么根据不同设备的宽度html元素的fontSize也不相同
+		我们在写less或者css的时候，640的设计图是针对320的屏幕的，所以会看到px相对来说都是比较大的。只要设置好下边的这个比率，那么就不需要去管那个缩放了。
+		具体分析：如果是320的屏幕则比率刚好是0.5，这样之前设置字体的大小为26px，那么就变成了13px，这样字体的大小就不算大了。
+		如果屏幕是640，那么设计图和网页按照1比1显示出来。是不好看的
+		一般手机端的屏幕是小于640的。
+		*/
+		~function anonymous(){/*外边可以访问里边的函数*/
+			let computedREM=function(){
+				let deviceWidth=document.documentElement.clientWidth;
+				let w=640;
+				/*根据不同的*/
+				let ratio=deviceWidth/w*100;
+
+				if(deviceWidth>640){
+					document.documentElement.style.fontSize="100px";
+					return;
+				}
+				document.documentElement.style.fontSize=ratio+"px";
+			};
+			computedREM();
+			window.addEventListener("resize",computedREM);
+		}();
+	
+		
+	</script>
+
+</head>
+<body>
+	<main class="mainBox">
+		<!-- loading，项目的加载页面 -->
+		<section class="loadingBox">
+
+			<div class="title">
+				<h1>简历项目</h1>
+				<h2>HMG移动端的简历项目</h2>
+			</div>
+			
+			<div class="progress">
+				<div class="current"></div>
+			</div>
+		</section>
+		<!-- phone -->
+		<section class="phoneBox">
+			<h2 class="anSwerH2">
+				<p>大企业人事</p>
+				<span>来电中...</span>
+			</h2>
+			<h2 class="hangH2">
+				<p>人事</p>
+				<span>正在通过话中</span>
+				<span class="callTime">00:00</span>
+			</h2>
+			
+			<div class="answerBar">
+				<a href="javascript:;">拒绝</a>
+				<a href="javascript:;" class="answering" id="answering">接听</a>
+			</div>
+			<div class="phoneBoxFooter">
+				<div class="hangBar">
+					<span class="closePhone">挂断</span>
+					<a href="javascript:;">了解详情</a>
+				</div>
+			</div>
+
+			<audio id="phoneAnswer" src="static/music/phone.mp3" loop="true"></audio>
+			
+		</section>
+		<!-- keyborad -->
+		<section class="keyboardBox">
+			<ul class="wrapper clearfix">
+			</ul>
+			<div class="keyboard">
+				<!-- span标签设置为空，标签之间连空格都没有，是因为之后我们会判断不为空的情况下，发送的按钮会变成可点击的效果 -->
+				<span class="textKeyBoard"></span>
+				<a href="javascript:;" class="submit">发送</a>
+			</div>
+		</section>
+
+		<!-- cube 模仿区域 -->
+		<section class="cubeBox">
+			<ul class="cubeContainer">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span class="cubeBoxText">
+			<i>i</i> 点击魔方可以选择模块
+			</span>
+		</section>
+
+		<!-- 魔方的详情页面 -->
+		<section class="detailBox">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide">
+					<dl class="page1">
+						<dt>技能介绍</dt>
+						<dd><em>01</em>
+							<a href="#">
+								javascript的组件开发和dom的操作
+							</a>
+						</dd>
+						<dd><em>02</em><a href="#">
+							javascript面向对象的开发以及事件委托
+						</a></dd>
+						<dd><em>03</em><a href="#">
+							vue/vue-router/vuex/axios的开发
+						</a></dd>
+						<dd><em>04</em><a href="#">
+							jquery的开发包括源码的解析
+						</a></dd>
+						<dd><em>05</em><a href="#">
+							node和mongodb的开发
+						</a></dd>
+						<dd><em>06</em><a href="#">
+							小程序的的开发和实战
+						</a></dd>
+						<dd><em>07</em><a href="#">
+							前端开发工程化
+						</a></dd>
+						<dd><em>08</em><a href="#">
+							html5+css3的响应式布局
+						</a></dd>
+						<dd><em>09</em><a href="#">
+							php和mysql的后台接口的开发
+						</a></dd>
+						<dd><em>10</em><a href="#">
+							后台系统linux的使用
+						</a></dd>
+						<dd><em>11</em><a href="#">
+							其他辅助技能：ps软件使用、github、less等等
+						</a></dd>
+					</dl>
+				  </div>
+				  <div class="swiper-slide">
+					  <div class="page2">
+						<h2>专业介绍</h2>
+						<img src="images/page2.1.jpg" alt="">
+						<img src="images/page2.2.jpg" alt="">
+						<img src="images/page2.3.jpg" alt="">
+						<img src="images/page2.4.jpg" alt="">
+						<img src="images/page2.5.jpg" alt="">
+						<img src="images/page2.6.jpg" alt="">
+						<img src="images/page2.home.jpg" alt="">
+					  </div>
+				  </div>
+				  <div class="swiper-slide">
+					  <div class="page3">
+						<h2>个人信息</h2>
+						<div class="messageTop">
+							<p><b>姓名</b>:胡明桂  <b>学历</b>:本科</p>
+							<p><b>年龄</b>:30  <b>婚否</b>:已婚</p>
+							<p><b>电话</b>:1888888888 </p>
+							<p><b>地址</b>北京师昌平区沙河镇某个地方</p>
+							<p>
+								<b>毕业学校</b>:湖南农业大学,专业:电子政务。
+							</p>
+						</div>
+					  </div>
+				  </div>
+				  <div class="swiper-slide">
+					<div class="page4">
+						<h2>工作经验</h2>
+						<div class="messageMiddle">
+							<p><b>前端开发相关的工作近4年</b></p>
+							<p><b>单位</b>:中国研修网 时间:2015年7月到2016年11月,岗位:前端开发</p>
+							<p><b>单位</b>:湖南红铭教育科技有限公司  时间:2017年3月到2019年1月 职位:前端及php讲师助理</p>
+							<p><b>个人兴趣</b>：跑步健身，阅读写作</p>
+						</div>
+					</div>
+				  </div>
+				  <div class="swiper-slide">
+					  <div class="page5">
+						<img src="./images/page5.1.jpg" />
+						<div class="page5-middle">
+							<p>寻找岗位</p>
+							<p>前端开发工程师</p>
+						</div>
+						
+						<img src="./images/page5.1.jpg" />
+					  </div>
+				  </div>
+				  <div class="swiper-slide">
+					  <div class="page6">
+						  <div class="page6-middle">
+							<p>联系邮箱:<p>364846148@qq.com</p></p>	
+							<p>微信及电话:<p>18310000000</p></p>	
+						  </div>
+						  <img src="./images/page6.2.png" alt="">
+					 	  <img src="./images/page6.1.png" alt="">
+					  </div>
+
+				  </div>
+				</div>
+			  </div>
+		</section>
+	</main>
+
+</body>
+
+<!-- 引入zepto插件,然后在index.js中使用这个插件 -->
+<script src="script/zepto.js"></script>
+<script src="script/jq.js"></script>
+<script src="./script/swiper.min.js"></script>
+<script src="./script/makisu.js"></script>
+<script src="script/index.js"></script>
+
+
+</html>
