@@ -8,28 +8,28 @@ let loadingData=(function(){
 	let appUrl="https://huminggui.github.io/appresume";
 
 	let imagesData=[
-		appUrl+"/images/cube1.jpg",
-		appUrl+"/images/cube2.jpg",
-		appUrl+"/images/cube3.jpg",
-		appUrl+"/images/cube4.jpg",
-		appUrl+"/images/cube5.jpg",
-		appUrl+"/images/cube6.jpg",
-		appUrl+"/images/inter.jpg",
-		appUrl+"/images/keyboard.png",
-		appUrl+"/images/page2.1.jpg",
-		appUrl+"/images/page2.2.jpg",
-		appUrl+"/images/page2.3.jpg",
-		appUrl+"/images/page2.4.jpg",
-		appUrl+"/images/page2.5.jpg",
-		appUrl+"/images/page2.6.jpg",
-		appUrl+"/images/page2.home.jpg",
-		appUrl+"/images/page3.home.jpg",
-		appUrl+"/images/page4.home.jpg",
-		appUrl+"/images/page5.home.jpg",
-		appUrl+"/images/page6.home.jpg",
-		appUrl+"/images/page6.1.png",
-		appUrl+"/images/page6.2.png",
-		appUrl+"/images/self.jpg"
+		"/images/cube1.jpg",
+		"/images/cube2.jpg",
+		"/images/cube3.jpg",
+		"/images/cube4.jpg",
+		"/images/cube5.jpg",
+		"/images/cube6.jpg",
+		"/images/inter.jpg",
+		"/images/keyboard.png",
+		"/images/page2.1.jpg",
+		"/images/page2.2.jpg",
+		"/images/page2.3.jpg",
+		"/images/page2.4.jpg",
+		"/images/page2.5.jpg",
+		"/images/page2.6.jpg",
+		"/images/page2.home.jpg",
+		"/images/page3.home.jpg",
+		"/images/page4.home.jpg",
+		"/images/page5.home.jpg",
+		"/images/page6.home.jpg",
+		"/images/page6.1.png",
+		"/images/page6.2.png",
+		"/images/self.jpg"
 	];
 	let num=0;
 	let len=imagesData.length;
@@ -272,7 +272,7 @@ let keyboardRander=(function(){
 	return{
 		init:function(){
 			$keyboardBox.css("display","block");
-			$.getJSON(appUrl+"/static/message.json",function(res){
+			$.getJSON("/static/message.json",function(res){
 				data=res;
 				messageLength=data.length;
 				addMessage();
